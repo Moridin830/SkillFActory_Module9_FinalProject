@@ -4,32 +4,46 @@ namespace SkillFActory_Module9_FinalProject
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            SortList.InputNames();
-            //try
-            //{
 
-            //}catch(Exception ex) when (ex is ArgumentException)
-            //{
-                
-            //}
-            //catch (Exception ex) when (ex is ArgumentNullException)
-            //{
+            Exception[] OurExceptions = ExceptionForTask.ArrayOfExceptions();
 
-            //}
-            //catch (Exception ex) when (ex is ArgumentOutOfRangeException)
-            //{
+            foreach(var CurrentException in OurExceptions)
+            {
 
-            //}
-            //catch (Exception ex) when (ex is IndexOutOfRangeException)
-            //{
+                try
+                {
+                    throw CurrentException;
+                }
+                catch (Exception ex) when (ex is ArgumentException)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                catch (Exception ex) when (ex is ArgumentNullException)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                catch (Exception ex) when (ex is ArgumentOutOfRangeException)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                catch (Exception ex) when (ex is IndexOutOfRangeException)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                catch (Exception ex) when (ex is ExceptionForTask)
+                {
+                    Console.WriteLine(ex.Message);
+                }
 
-            //}
-            //catch (Exception ex) when (ex is TimeoutException)
-            //{
+            }
 
-            //}
+            Console.WriteLine("Press any key...");
+            Console.ReadKey();
+
         }
     }
+
+    
 }

@@ -10,12 +10,31 @@ namespace SkillFActory_Module9_FinalProject
     {
         public ExceptionForTask()
         {
-
+            
         }
 
         public ExceptionForTask(string Message) : base(Message)
         {
             
+        }
+
+        public static Exception[] ArrayOfExceptions()
+        {
+            Exception[] OurArray = new Exception[5];
+
+            ArgumentException Ex1           = new ();
+            ArgumentNullException Ex2       = new ();
+            ArgumentOutOfRangeException Ex3 = new ();
+            IndexOutOfRangeException Ex4    = new ();
+            ExceptionForTask Ex5            = new ();
+
+            OurArray[0] = Ex1;
+            OurArray[1] = Ex2;
+            OurArray[2] = Ex3;
+            OurArray[3] = Ex4;
+            OurArray[4] = Ex5;
+
+            return OurArray;
         }
     }
 }
