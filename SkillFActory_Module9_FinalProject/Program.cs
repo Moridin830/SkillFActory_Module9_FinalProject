@@ -7,8 +7,10 @@ namespace SkillFActory_Module9_FinalProject
         static void Main()
         {
 
+            // Получаем массив исключений
             Exception[] OurExceptions = ExceptionForTask.ArrayOfExceptions();
 
+            // Проходим в цикле по каждому из исключений и выводим сообщение
             foreach(var CurrentException in OurExceptions)
             {
 

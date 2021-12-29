@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace SkillFActory_Module9_FinalProject
 {
+    /// <summary>
+    /// Исключение для выполнения задания
+    /// </summary>
     public class ExceptionForTask : Exception
     {
         public ExceptionForTask()
@@ -18,6 +21,10 @@ namespace SkillFActory_Module9_FinalProject
             
         }
 
+        /// <summary>
+        /// Метод, возвращающий массив из 5 исключений разных типов
+        /// </summary>
+        /// <returns></returns>
         public static Exception[] ArrayOfExceptions()
         {
             Exception[] OurArray = new Exception[5];
